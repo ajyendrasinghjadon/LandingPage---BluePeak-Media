@@ -5,7 +5,10 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ["https://bluepeakk-media.vercel.app/"],
+    credentials: true
+}));
 
 // Configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
