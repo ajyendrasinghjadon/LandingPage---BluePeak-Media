@@ -1,0 +1,35 @@
+BluePeak Media - UI/UX Audit Results
+====================================
+
+Overall Impression:
+The website has a strong foundation with premium elements (Hero, Services, and Footer look great). However, there are inconsistencies in the "rhythm" and "design tokens" (padding, font sizes, shadows) that make some sections feel slightly disconnected from others.
+
+Key Findings & Proposed Refinements:
+
+1. Section Rhythm (Vertical Spacing)
+- Current: Padding varies significantly (e.g., Process is py-16, Services is py-20, Pricing is py-12).
+- Refinement: Standardize all major sections to py-24 (mobile) and py-32 (desktop). This creates a consistent "breathing room" that high-end agency sites always have.
+
+2. Typography Scale
+- Current: H2 headings vary from text-3xl to text-5xl across different sections.
+- Refinement: Standardize all section H2s to "text-4xl md:text-5xl lg:text-6xl" with "font-extrabold tracking-tight". This makes the hierarchy much clearer.
+
+3. Design Tokens (Consistency)
+- Border Radius: Some cards are rounded-xl, some rounded-2xl, some rounded-3xl.
+  -> Proposed: Standardize all primary cards (Pricing, Problems, Services, Testimonials) to "rounded-3xl" for a cohesive modern feel.
+- Shadows: Some use heavy shadow-2xl, others shadow-md.
+  -> Proposed: Use a uniform "shadow-xl shadow-primary/5" or "shadow-indigo-500/10" for a premium, airy look.
+
+4. Button Consistency
+- Current: Hero buttons are rounded-full, Pricing is rounded-lg, Contact is rounded-xl.
+- Refinement: Standardize all primary CTA buttons to "rounded-full" and secondary/form buttons to "rounded-2xl". This ensures they feel part of the same interface.
+
+5. Visual Hierarchy & Color
+- Alternating Sections: Ensure the lightBg/darkBg alternating pattern is consistent.
+- Neutral Consistency: Some sections use Gray-600 for text, others Gray-700. Standardize to a consistent palette for better accessibility.
+
+Next Steps:
+- I will proceed with these "minor" refinements (padding, font sizes, border radius, shadows) as they fall under the "minor improvements" category.
+- I will NOT change the core structure/layout of any section unless requested.
+
+Do you approve of standardizing the Section Padding and H2 Typography across the whole site to these new scales?
