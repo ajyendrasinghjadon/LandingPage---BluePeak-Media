@@ -9,10 +9,12 @@ app.use(cors());
 
 // Configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // or your email provider
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // TLS
     auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // Use an App Password if using Gmail
+        pass: process.env.EMAIL_PASS, // Gmail App Password
     },
 });
 
@@ -21,7 +23,7 @@ app.post('/api/send-email', async (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: process.env.RECEIVER_EMAIL, // Your agency email
+        to: process.env.RECEIVER_EMAIL, 
         subject: `New Inquiry from ${name} - BluePeak Media`,
         text: `
             Name: ${name}

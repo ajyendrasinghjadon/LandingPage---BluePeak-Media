@@ -1,5 +1,4 @@
-﻿// src/components/Contact.jsx
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -9,11 +8,14 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("STEP 1");
+    console.log("API URL:", import.meta.env.VITE_API_URL);
+
     setStatus({ type: "loading", message: "Sending your message..." });
 
     try {
       // Integration point for backend
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/send-email`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/send-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
